@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NativeCode</string>
+    <string name="title_activity_java_cpp">Java vs C++</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="cpp_code">C++ Code</string>
+    <string name="java_code">Java Code</string>
+    <string name="calculate_primes">Calculate Primes</string>
+    <string name="calculate_factors">Calculate Fibonacci</string>
+    <string name="finished_fib">done, fib nr:</string>
+    <string name="duration_ms">\nDuration in ms:</string>
+    <string name="finished_prime">done, last prime:</string>
+</resources>
