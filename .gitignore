@@ -82,6 +82,10 @@ obj/
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 
+# Markdown Plugin
+.idea/markdown-navigator.xml
+.idea/markdown-navigator/*
+
 # Keystore files
 *.jks
 
