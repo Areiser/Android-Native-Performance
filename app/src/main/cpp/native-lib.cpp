@@ -1,6 +1,5 @@
 #include <jni.h>
 #include <string>
-#include <iostream>
 #include <vector>
 #include <math.h>
 
@@ -13,12 +12,12 @@ Java_edu_hm_cs_areiser_nativecode_CppFragment_calculatePrimes(JNIEnv *env,
     //Sieb des eratosthenes
     vector<int> *vec = new vector<int>();
     int max = 100000;
-    //Select numbers from 2 to a million
+    //Select numbers from 2 to max
     for (int i = 2; i < max; i++) {
         vec->push_back(i);
     }
 
-    //i till square root of n
+    //i till square root of max
     int root = (int) sqrt(max);
     for (int i = 2; i < root; i++) {
         for (vector<int>::iterator it = vec->begin() + i; it < vec->end();) {
@@ -30,8 +29,6 @@ Java_edu_hm_cs_areiser_nativecode_CppFragment_calculatePrimes(JNIEnv *env,
             }
         }
     }
-
-    cout << "Finished reading primes.";
 
     int last = vec->at(vec->size() - 1);
     return last;

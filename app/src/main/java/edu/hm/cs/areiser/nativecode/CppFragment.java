@@ -13,9 +13,24 @@ import android.widget.TextView;
  */
 
 public class CppFragment extends Fragment {
+
     static {
         System.loadLibrary("native-lib");
     }
+
+    /**
+     * Calculates primes.
+     * @return Max prime
+     */
+    public native int calculatePrimes();
+
+
+    /**
+     * Native implementation of fibonacci numbers - recursive
+     * @param n - what fibonacci number to calculate
+     * @return the n'th fibonacci number
+     */
+    public static native int fibNative(int n);
 
     @Override
     public View onCreateView(LayoutInflater pLayoutInflater, ViewGroup pContainer, Bundle pSavedInstanceState) {
@@ -45,19 +60,5 @@ public class CppFragment extends Fragment {
         });
         return view;
     }
-
-    /**
-     * Calculates primes.
-     * @return
-     */
-    public native int calculatePrimes();
-
-
-    /**
-     * Native implementation of fibonacci numbers - recursive
-     * @param n - what fibonacci number to calculate
-     * @return the n'th fibonacci number
-     */
-    public static native int fibNative(int n);
 
 }

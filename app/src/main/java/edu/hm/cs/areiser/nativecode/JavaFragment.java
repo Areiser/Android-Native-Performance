@@ -10,8 +10,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -41,7 +39,7 @@ public class JavaFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 long startTime = System.currentTimeMillis();
-                int fib = fibJ(40);
+                int fib = fibJava(40);
                 long duration = System.currentTimeMillis() - startTime;
                 factorText.setText(getString(R.string.finished_fib) + fib + getString(R.string.duration_ms) + duration);
             }
@@ -58,7 +56,7 @@ public class JavaFragment extends Fragment {
             list.add(i);
         }
 
-        //i till square root of n
+        //i till square root of max
         int root = (int) Math.sqrt(max);
 
         for (int i = 2; i < root; i++) {
@@ -77,12 +75,12 @@ public class JavaFragment extends Fragment {
     }
 
     // Java implementation of fibonacci - recursive
-    public static int fibJ(int n) {
+    public static int fibJava(int n) {
         if (n <= 0)
             return 0;
         if (n == 1)
             return 1;
-        return fibJ(n - 1) + fibJ(n - 2);
+        return fibJava(n - 1) + fibJava(n - 2);
     }
 
 }
